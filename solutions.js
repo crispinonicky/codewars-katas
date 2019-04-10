@@ -189,3 +189,18 @@ function list(names){
   console.log(names.length)
 }
 
+// In this little assignment you are given a string of space separated numbers, 
+// and have to return the highest and lowest number.
+
+function highAndLow(numbers){
+
+  let numArr = numbers.split(" ").sort(function(a,b) {return a - b})
+  
+  
+  return(numArr[numArr.length - 1] + " " + numArr[0])
+  
+  
+}
+
+
+
