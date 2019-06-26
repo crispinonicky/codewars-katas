@@ -596,3 +596,44 @@ function longestConsec(strarr, k) {
             final.append(i)
             
     return final
+
+// Remove string spaces (PHP)
+
+function no_space(string $s): string {
+  
+  $solution = explode(" ",$s);
+  
+//   print_r ($solution);
+  
+  $solution = join($solution);
+  
+  return ($solution);
+  
+}
+
+// PHP Bonus puzzle:
+
+function bonusTime($salary, $bonus) {
+
+  if ($bonus == true) {
+    return (('$') . $salary * 10);
+  } else {
+    return (('$') . $salary);
+  }
+    
+    
+}
+
+// Substituting variables into strings: Padded Numbers (PHP)
+
+function solution($value){
+  
+  while((strlen(strval($value))) < 5){
+    $value = "0" . $value;
+    print($value);   
+  }
+  
+  return "Value is " . $value;
+  
+};
+
