@@ -862,3 +862,108 @@ function alphabet_position(string $s): string {
   
 }
 
+// Find the missing letter
+
+function find_missing_letter(array $array): string {
+
+  for ($i = 0; $i < count($array); $i++) {
+    if (ord($array[$i]) + 1 !== ord($array[$i + 1])) {
+      return chr(ord($array[$i]) + 1);
+    }
+  }
+  
+}
+
+// Split strings
+
+function solution($str) {
+
+  if (strlen($str) % 2 === 1) {
+    $str .= "_";
+  }
+  
+  $olution = [];
+
+  for ($i = 0; $i < strlen($str); $i = $i + 2) {
+    array_push($olution, substr($str, $i, 2));
+  }
+  
+  return $olution;
+
+}
+
+// Convert to camelcase
+
+function toCamelCase($str){
+
+if (strpos($str, '-') !== false) {
+    $plit = explode("-", $str);
+  } else {
+    $plit = explode("_", $str);
+  }
+  
+  $olution = [];
+
+  for ($i = 1; $i < count($plit); $i++) {
+    $plit[$i] = ucfirst($plit[$i]);
+  }
+  
+  
+//   $plit = $str[0] . substr($plit, 1);
+  return(implode("", $plit));
+  
+}
+
+
+// Numerical palindrome #1
+
+def palindrome(num):
+
+    if isinstance(num, str):
+        return "Not valid"
+    elif (num < 0):    
+        return "Not valid"
+    
+    rev = int(str(num)[::-1])
+    
+    if (rev == num):
+        return True
+        
+    return False
+
+// New cashier does not know about space or shift
+
+ction getOrder(input) {
+  
+  let menu = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings",
+  "Milkshake", "Coke"]
+  
+  let order = []
+  
+  let currentWord = ""
+  
+  for (i = 0; i < input.length; i++){
+    currentWord += input[i]
+//     console.log(currentWord)
+    for (j = 0; j < menu.length; j++) {
+      if (currentWord === menu[j].toLowerCase()) {
+        order.push(menu[j])
+        currentWord = ""
+      }
+    }
+  }
+    
+  let final = []
+  
+  for (i = 0; i < menu.length; i++) {
+    for (j = 0; j < order.length; j++) {
+      if (order[j] === menu[i]) {
+        final.push(order[j])
+      }
+    }
+  }
+  
+  return final.join(" ")
+  
+}
+
