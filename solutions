@@ -1454,4 +1454,44 @@ function stringTransformer(str) {
   
 }
 
+// Polynomials
+
+function differentiate(equation, point){
+
+  let signs = [];
+  let values = equation.split(/[-+]+/)
+  
+  for (let i = 0; i < equation.length; i++) {
+    equation[i] == '-' || equation[i] == '+' ? signs.push(equation[i]) : 0;
+  }
+  
+  values[0] == '' ? values.shift() : signs.unshift('+') 
+  
+  console.log(signs)
+  console.log(values)
+
+  for (let i = 0; i < values.length; i++) {
+  
+  
+    values.splice(i, 1, values[i].replace('x', `*${point}`))
+    values[i][0] == '*' ? values.splice(i, 1, values[i].slice(1)) : 0;
+    
+    let diff = values[i]
+    
+    values[i].includes("^") == true ? 
+    diff = values[i].split("^").slice(-1)[0] * parseInt(values[i]) : 0;
+    
+    console.log(diff)
+    
+    diff !== values[i] ? 
+    // deal with each character, you got this man!!!
+  }
+  
+  console.log(values)
+  
+//   values.forEach((x,i) => {
+//     console.log(parseInt(x))
+//   })
+   
+}
 
