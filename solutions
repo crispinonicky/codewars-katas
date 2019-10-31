@@ -1467,31 +1467,52 @@ function differentiate(equation, point){
   
   values[0] == '' ? values.shift() : signs.unshift('+') 
   
-  console.log(signs)
-  console.log(values)
+//   console.log(signs)
+  console.log(values) 
+  
+  // FIGURE OUT WHY NUMBERS WITH DEGREE OF 1 ARENT WORKING
 
   for (let i = 0; i < values.length; i++) {
   
+    parseInt(values[i]) == values[i] ? values.splice(i, 1, "0") : 0;
+    
+
   
     values.splice(i, 1, values[i].replace('x', `*${point}`))
     values[i][0] == '*' ? values.splice(i, 1, values[i].slice(1)) : 0;
     
-    let diff = values[i]
+    let base = values[i]
     
     values[i].includes("^") == true ? 
-    diff = values[i].split("^").slice(-1)[0] * parseInt(values[i]) : 0;
+    base = values[i].split("^").slice(-1)[0] * parseInt(values[i]) : 0;
     
-    console.log(diff)
+//     console.log(base)
     
-    diff !== values[i] ? 
-    // deal with each character, you got this man!!!
+    
+    if(base !== values[i]) {
+    
+      let current = values[i].replace(values[i].split('*')[0], base);
+    
+//       console.log('New number with wrong power',current)
+      
+      if (current.includes("^") == true) {
+      
+      let power = current.split("^")[current.split("^").length - 1] - 1
+      
+//       console.log("base: ", base)
+//       console.log("The power should be", power)
+      
+      values.splice(i, 1, `${point}*${base}^${power}`)
+      
+      } else {
+        values.splice(i, 1, current);
+      }
+    }
   }
+  
+  
   
   console.log(values)
   
-//   values.forEach((x,i) => {
-//     console.log(parseInt(x))
-//   })
    
 }
-
