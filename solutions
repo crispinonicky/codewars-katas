@@ -1535,7 +1535,7 @@ function longestRepetition(s) {
     s[i] == s[i + 1] ? counter++ : counter = 1;
     counter > maxArr[1] ? maxArr.splice(0, 2, s[i], counter) : 0;
   }
-  
+   
   return maxArr;
 }
 
