@@ -1264,7 +1264,7 @@ function findRoutes(routes) {
     if (i % 2 === 0) {
       starts.push(arr1[i]);
     }  else {
-      ends.push(arr1[i]);
+      ends.push(arr1[i]); 
     }
     
   }
@@ -1276,7 +1276,7 @@ function findRoutes(routes) {
     if(starts[i] === currentLocation){
       final.push(ends[i]);
       currentLocation = ends[i];
-      i = -1;
+      i = -1; 
       continue;
     }
   }
@@ -1295,7 +1295,7 @@ function solve(s) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
       scoreArr.push(score);
-      score = 0;
+      score = 0; 
     } else {
       score += (s.charCodeAt(i) - 96)
     }
@@ -1310,10 +1310,10 @@ function solve(s) {
     if (scoreArr[i] > solution) {
       solution = scoreArr[i];
     }
-  }
+  } 
   
   return solution;
-  
+   
 };
 
 // Eliminate the intruders
@@ -1327,10 +1327,10 @@ function solve(s) {
     x == 1 ? sum += 2 ** power : power--;
     power++;
   })
-  
+   
   return sum;
-  
-}
+   
+} 
 
 // Binary Cleaner
 
@@ -1413,7 +1413,7 @@ function streetFighterSelection(fighters, position, moves){
       position[0]-=5;
     } else if (x == 'left' && position[0] == 0) {
       position[0]+=5;
-    }
+    } 
       solution.push(fighters[position[1]][position[0]]);
   })
   
@@ -1468,7 +1468,7 @@ function differentiate(equation, point){
   
   values[0] == '' ? values.shift() : signs.unshift('+');
   let copy = [...values]; 
- 
+  
   for (let i = 0; i < values.length; i++) {
   
     parseInt(values[i]) == values[i] ? values.splice(i, 1, "0") : 0;
