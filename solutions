@@ -1628,7 +1628,7 @@ function validParentheses(parens){
 
   if (parens[0] === ")" || parens[parens.length - 1] == "(") {
     return false
-  }
+  } 
   
   let parenCounter = 0
   
@@ -1638,9 +1638,9 @@ function validParentheses(parens){
     } else {
       parenCounter--
     }
-    
+     
   }
-  
+   
   if (parenCounter === 0){
     return true
   } else {
