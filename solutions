@@ -102,14 +102,14 @@ function sumTwoSmallestNumbers(numbers) {
 
 function calculateYears(principal, interest, tax, desired) {
    
-  let counter = 0
+  let counter = 0;
   
-  while (principal < desired){
-    principal = principal + (principal * interest) - (principal * interest * tax)
-    counter++
+  while (principal < desired) {
+    principal = principal + (principal * interest) - (principal * interest * tax);
+    counter++;
   }
   
-  return counter
+  return counter;
   
 }
 
@@ -121,19 +121,16 @@ function calculateYears(principal, interest, tax, desired) {
 
 function sortArray(array) {
   
-  let oddsArr = []
+  let oddsArr = [];
   
   for (i = 0; i < array.length; i++){
     if (array[i] % 2 == 1){
-      oddsArr.push(array[i])
-      array[i] = " "
+      oddsArr.push(array[i]);
+      array[i] = " ";
     }
   }
-  
-  console.log(array)
-  
-  oddsArr.sort(function (a,b) {return a - b})
-  
+    
+  oddsArr.sort(function (a,b) {return a - b});
   
   for (i = 0; i < array.length; i++){
     if (array[i] === ' '){
