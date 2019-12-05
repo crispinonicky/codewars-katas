@@ -1571,12 +1571,12 @@ var moveZeros = function (arr) {
 // Consecutive Fibs
 
 function productFib(prod){
-    
+     
   let fib = [0,1]
    
   for (i = 0; i < 99; i++) {
     fib.push(fib[i] + fib[i + 1])
-  }
+  } 
     
   for (i = 0; i < fib.length; i++) {
   
@@ -1587,7 +1587,7 @@ function productFib(prod){
     }
     
   }
-      
+       
 }
 
 // Money Match
