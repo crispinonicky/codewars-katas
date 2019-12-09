@@ -1242,12 +1242,8 @@ function findRoutes(routes) {
   let ends = [];
   
   for (i = 0; i < arr1.length; i++) {
-  
-    if (i % 2 === 0) {
-      starts.push(arr1[i]);
-    }  else {
-      ends.push(arr1[i]); 
-    }
+
+    i % 2 === 0 ? starts.push(arr[i]) : ends.push(arr[i])
     
   }
   
