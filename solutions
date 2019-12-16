@@ -1717,14 +1717,12 @@ let counter = 0;
     }
   })
   
-  if (counter == 1 || counter == 2) {
-    return 'Publish!'
-  } else if (counter > 2) {
-    return 'I smell a series!'
-  } else {
-    return 'Fail!'
-  }
-}
+
+  return counter == 1 || counter == 2 ? 
+  "Publish! :
+  return counter > 2 ?
+  "I smell a series!' :
+  "Fail!"
 
 // Sum the strings
 
