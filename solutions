@@ -1823,7 +1823,7 @@ var removeVowels = function(str){
 
 }
 
-// Missing vowel
+// Missing vowels
 
 function absentVowel(str){
   
