@@ -1882,7 +1882,7 @@ function houseNumbersSum(inputArray) {
 
 function arpeggio(notes) {
 
-  let notesArr = [notes]
+  let notesArr = [notes];
   
   console.log(notes.charCodeAt(0))
   
@@ -1896,3 +1896,4 @@ function arpeggio(notes) {
   console.log(notesArr)
   
 }
+
